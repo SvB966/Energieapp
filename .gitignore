@@ -1,0 +1,48 @@
+# Bytecode en cache van Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Build artefacten en mappen
+# Als je build output altijd in een map 'build' in de root van je project staat:
+build/
+# Als je specifiek de map 'build' binnen '3. Configuration & Build' wilt negeren:
+# "3. Configuration & Build/build/"
+dist/
+*.egg-info/
+
+# Logbestanden
+*.log
+logs/
+
+# Tijdelijke bestanden
+tmp/
+temp/
+
+# Besturingssysteem-specifieke bestanden
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDE-specifieke configuratiemappen (pas aan naar je eigen IDE)
+# .vscode/
+# .idea/
+# .project
+# .pydevproject
+
+# Virtuele omgevingen (als je ze binnen je projectmap aanmaakt)
+# venv/
+# .venv/
+# env/
+# .env/
+
+# Eventuele lokale configuratiebestanden die je niet wilt delen
+# Bijvoorbeeld:
+# local_settings.py
+# database_credentials.ini
+# config.local.yaml
