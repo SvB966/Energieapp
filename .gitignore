@@ -5,44 +5,75 @@ __pycache__/
 *.pyd
 .cache/
 
+# Specifieke map voor .pyc bestanden zoals getoond in de afbeelding
+localpycs/
+
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
 # Build artefacten en mappen
-# Als je build output altijd in een map 'build' in de root van je project staat:
+# Specifiek voor jouw huidige build output locatie:
+3. Configuration & Build/build/
+# Algemene build mappen (goed om te hebben voor het geval je build proces verandert)
 build/
-# Als je specifiek de map 'build' binnen '3. Configuration & Build' wilt negeren:
-# "3. Configuration & Build/build/"
 dist/
 *.egg-info/
+*.spec # PyInstaller spec files
+
+# Virtuele omgevingen (voorkomen dat je afhankelijkheden commit)
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Bestanden voor omgevingsvariabelen (vaak met gevoelige info)
+.env
+.env.*
+!.env.example # Tenzij je een .env.example wilt delen
 
 # Logbestanden
 *.log
 logs/
+*.log.*
 
 # Tijdelijke bestanden
 tmp/
 temp/
+*.tmp
+*.swp # Vim swap files
+*~ # Backup files
 
 # Besturingssysteem-specifieke bestanden
-.DS_Store
-Thumbs.db
-ehthumbs.db
+.DS_Store # macOS
+Thumbs.db # Windows
+ehthumbs.db # Windows
+Desktop.ini # Windows
 
-# IDE-specifieke configuratiemappen (pas aan naar je eigen IDE)
-# .vscode/
-# .idea/
-# .project
-# .pydevproject
+# IDE-specifieke configuratiemappen en bestanden
+.vscode/
+.idea/ # JetBrains IDEs (PyCharm, IntelliJ, etc.)
+*.suo # Visual Studio
+*.user # Visual Studio
+*.sln.docstates # Visual Studio
+*.ntvs_analysis.dat # Python Tools for Visual Studio
 
-# Virtuele omgevingen (als je ze binnen je projectmap aanmaakt)
-# venv/
-# .venv/
-# env/
-# .env/
+# Test output en coverage reports
+htmlcov/ # Coverage.py output
+.pytest_cache/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
 
-# Eventuele lokale configuratiebestanden die je niet wilt delen
-# Bijvoorbeeld:
-# local_settings.py
-# database_credentials.ini
-# config.local.yaml
+# Documentatie build output
+_build/ # Sphinx docs
+
+# Data bestanden die je niet in de repo wilt (pas aan indien nodig)
+# *.csv
+# *.xlsx
+# data/raw_data/
+
+# Overige
+*.bak # Oude backup bestanden
